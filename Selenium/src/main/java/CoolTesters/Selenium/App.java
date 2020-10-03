@@ -16,11 +16,76 @@ public class App
         
     {
     	
-    	System.out.println("Curso Septiembre 05.09.2020");
-    	String exePath = Paths.get("").toAbsolutePath().toString() + File.separator + "driver" + File.separator; //tomando el path del driver en el sistema
-    	System.setProperty("webdriver.chrome.driver", exePath + "chromedriver.exe");// Establecer la propiedad del .exe
-    	WebDriver driver = new ChromeDriver(); // Inicializando el driver
-    	driver.get("http://www.cooltesters.com/tienda-de-cursos/selenium-con-java");
+   	
+//    	System.out.println("Curso Septiembre 05.09.2020");
+//    	String exePath = Paths.get("").toAbsolutePath().toString() + File.separator + "driver" + File.separator; //tomando el path del driver en el sistema
+//    	System.setProperty("webdriver.chrome.driver", exePath + "chromedriver.exe");// Establecer la propiedad del .exe
+//    	WebDriver driver = new ChromeDriver(); // Inicializando el driver
+//    	driver.get("http://www.cooltesters.com/tienda-de-cursos/selenium-con-java");
+//    	
+    	
+//    	byte x;
+//    	
+//    	x=127;
+//    	System.out.println(x);
+//    	
+//    	short y=130;
+//    	System.out.println(y);
+//    	
+//    	int z = 98345;
+//    	System.out.println(z);
+//    	
+//    	long a = 3456789;
+//    	float base = 30.5f;
+//    	double altura = 40.76d;
+//    	
+//    	char letraA= 'A';
+//    	System.out.println(letraA);
+//    	
+//    	String cadenaText0= "Cool Testers";
+//    	
+//    	System.out.println(cadenaText0);
+//    			
+//    	boolean avesVuelan;
+//    	avesVuelan = true;
+//    	
+//    	System.out.println("Las aves vuelan? "+ avesVuelan);
+    	
+    	/*
+    	 * Operadores Aritmeticos 
+    	 */
+  
+
+//      	int x=1;
+//    	int y=2;
+//    	int resultado;
+//    	
+//    	resultado= x+y;
+//    	System.out.println("resultado"+resultado);
+//    	
+//    	/*
+//    	 * Operadores Unarios
+//    	 */
+//    	
+//    	int valor1 =3;
+//    	System.out.println("valor1 es igual a "+ valor1);
+//    	int incrementar = ++valor1;
+//    	System.out.println("incrementar es igual a "+incrementar);
+//    	
+
+    	/*
+    	 * Operadores relacionales y condicionales
+    	 */
+    	
+    	int x = 7;
+    	int z = 8;
+    	
+    	if (x==z) {
+    		System.out.println("x es igual a z");
+    	}
+    	else {
+    		System.out.println("x es diferente de z");
+    	}
     	
     }
 }
