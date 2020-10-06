@@ -3,9 +3,17 @@ package methods;
 public class methods {
 
 	public static void main(String[] args) {
+		
 		int resultado = suma (3,4);
 		System.out.println(resultado);
 		
+		
+		int resultado2 = suma(3,4,5);
+		System.out.println(resultado2);
+		
+		
+		int resultado3 = suma(3,4,5,"hola");
+		System.out.println(resultado3);
 		
 		String marca = carro(1);
 		System.out.println(marca);
@@ -18,6 +26,25 @@ public class methods {
 		return c;
 		
 	}
+	
+	//Metodo everload/sobrecarga
+	public static int suma(int a, int b, int c) {
+		
+		int d = a + b + c;
+		return d;
+		
+	}
+	
+	public static int suma(int a, int b, int c, String cadena) {
+		
+		int d = a + b + c;
+		
+		System.out.println(cadena);
+		
+		return d;
+	}
+	
+	
 	
 	public static String carro (int a) {
 		

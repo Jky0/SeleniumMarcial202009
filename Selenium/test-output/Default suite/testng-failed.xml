@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="CoolTesters.Selenium.AppTest">
+      <class name="CoolTesters.Selenium.softAssert">
         <methods>
-          <include name="shouldAnswerWithTrue"/>
+          <include name="softAssertDriver"/>
         </methods>
-      </class> <!-- CoolTesters.Selenium.AppTest -->
+      </class> <!-- CoolTesters.Selenium.softAssert -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

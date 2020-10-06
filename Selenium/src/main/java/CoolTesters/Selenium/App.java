@@ -2,7 +2,9 @@ package CoolTesters.Selenium;
 
 import java.io.File;
 import java.nio.file.Paths;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -46,7 +48,7 @@ public class App
 //    	
 //    	System.out.println(cadenaText0);
 //    			
-//    	boolean avesVuelan;
+//    	boolean avesVuela n;
 //    	avesVuelan = true;
 //    	
 //    	System.out.println("Las aves vuelan? "+ avesVuelan);
@@ -87,8 +89,26 @@ public class App
     		System.out.println("x es diferente de z");
     	}
     	
+        	
+    	//FindElements
+    	List<WebElement> firstLevelMenu = driver.findElements(By.xpath("//*[@class='firstLevelMenu']/b"));
+    	System.out.println("Numero de elementos: " + firstLevelMenu.size());
+    	String primerMenu = firstLevelMenu.get(0).getText();
+    	System.out.println(primerMenu);
+    	String segundoMenu = firstLevelMenu.get(1).getText();
+    	System.out.println(segundoMenu);
+    	
+    	for(int i = 0; i < firstLevelMenu.size(); i++ ) {
+    		System.out.println("Los menus son: " + firstLevelMenu.get(i).getText());
+    	}
+    	
+    	
+    	
+    	
     }
 }
+
+
 
 
 //    	String exePath = Paths.get("").toAbsolutePath().toString() + File.separator + "chromedriver" + File.separator; //Tomando path del driver en el sistema
