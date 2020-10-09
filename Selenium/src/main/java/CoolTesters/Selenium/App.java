@@ -85,6 +85,8 @@ public class App
     	Select oSelect = new Select(driver.findElement(By.id("assignleave_txtLeaveType")));
     	oSelect.selectByVisibleText("Maternity US");
     	Thread.sleep(3000);
+    	
+    	
 	
     	
     	
