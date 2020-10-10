@@ -1,55 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="2" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7269" started-at="2020-10-03T16:22:38Z" finished-at="2020-10-03T16:22:45Z">
+  <suite name="RegressionAutomatedQA" duration-ms="11112" started-at="2020-10-10T17:00:36Z" finished-at="2020-10-10T17:00:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7269" started-at="2020-10-03T16:22:38Z" finished-at="2020-10-03T16:22:45Z">
-      <class name="CoolTesters.Selenium.softAssert">
-        <test-method status="FAIL" signature="softAssertDriver()[pri:0, instance:CoolTesters.Selenium.softAssert@2890c451]" name="softAssertDriver" duration-ms="7232" started-at="2020-10-03T11:22:38Z" finished-at="2020-10-03T11:22:45Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The following asserts failed:
-	expected [asd] but found [OrangeHRM]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The following asserts failed:
-	expected [asd] but found [OrangeHRM]
-	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
-	at CoolTesters.Selenium.softAssert.softAssertDriver(softAssert.java:49)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+    <test name="TC_01_CorrecLogin" duration-ms="3930" started-at="2020-10-10T17:00:36Z" finished-at="2020-10-10T17:00:40Z">
+      <class name="loginTests.TC_01_CorrecLogin">
+        <test-method status="PASS" signature="startWebDriver()[pri:0, instance:loginTests.TC_01_CorrecLogin@2cf3d63b]" name="startWebDriver" is-config="true" duration-ms="1287" started-at="2020-10-10T12:00:36Z" finished-at="2020-10-10T12:00:37Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- softAssertDriver -->
-      </class> <!-- CoolTesters.Selenium.softAssert -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- startWebDriver -->
+        <test-method status="PASS" signature="TC_01()[pri:0, instance:loginTests.TC_01_CorrecLogin@2cf3d63b]" name="TC_01" duration-ms="1794" started-at="2020-10-10T12:00:37Z" finished-at="2020-10-10T12:00:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_01 -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:loginTests.TC_01_CorrecLogin@2cf3d63b]" name="closeDriver" is-config="true" duration-ms="814" started-at="2020-10-10T12:00:39Z" finished-at="2020-10-10T12:00:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- loginTests.TC_01_CorrecLogin -->
+    </test> <!-- TC_01_CorrecLogin -->
+    <test name="TC_02_IncorrectLogin" duration-ms="2831" started-at="2020-10-10T17:00:40Z" finished-at="2020-10-10T17:00:42Z">
+      <class name="loginTests.TC_02_IncorrectLogin">
+        <test-method status="PASS" signature="startWebDriver()[pri:0, instance:loginTests.TC_02_IncorrectLogin@55de24cc]" name="startWebDriver" is-config="true" duration-ms="1052" started-at="2020-10-10T12:00:40Z" finished-at="2020-10-10T12:00:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWebDriver -->
+        <test-method status="PASS" signature="TC_02()[pri:0, instance:loginTests.TC_02_IncorrectLogin@55de24cc]" name="TC_02" duration-ms="999" started-at="2020-10-10T12:00:41Z" finished-at="2020-10-10T12:00:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_02 -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:loginTests.TC_02_IncorrectLogin@55de24cc]" name="closeDriver" is-config="true" duration-ms="776" started-at="2020-10-10T12:00:42Z" finished-at="2020-10-10T12:00:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- loginTests.TC_02_IncorrectLogin -->
+    </test> <!-- TC_02_IncorrectLogin -->
+    <test name="TC_03_Logout" duration-ms="4315" started-at="2020-10-10T17:00:42Z" finished-at="2020-10-10T17:00:47Z">
+      <class name="loginTests.TC_03_Logout">
+        <test-method status="PASS" signature="startWebDriver()[pri:0, instance:loginTests.TC_03_Logout@536dbea0]" name="startWebDriver" is-config="true" duration-ms="1114" started-at="2020-10-10T12:00:42Z" finished-at="2020-10-10T12:00:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWebDriver -->
+        <test-method status="PASS" signature="TC_03()[pri:0, instance:loginTests.TC_03_Logout@536dbea0]" name="TC_03" duration-ms="2470" started-at="2020-10-10T12:00:43Z" finished-at="2020-10-10T12:00:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03 -->
+        <test-method status="PASS" signature="closeDriver()[pri:0, instance:loginTests.TC_03_Logout@536dbea0]" name="closeDriver" is-config="true" duration-ms="728" started-at="2020-10-10T12:00:46Z" finished-at="2020-10-10T12:00:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- loginTests.TC_03_Logout -->
+    </test> <!-- TC_03_Logout -->
+  </suite> <!-- RegressionAutomatedQA -->
 </testng-results>

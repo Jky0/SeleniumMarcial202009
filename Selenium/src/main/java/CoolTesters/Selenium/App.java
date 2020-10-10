@@ -2,7 +2,7 @@ package CoolTesters.Selenium;
 
 import java.io.File;
 import java.nio.file.Paths;
-
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,12 +25,15 @@ public class App
     	driver.get("https://opensource-demo.orangehrmlive.com/"); //Iniciar chrome en la URL especificada
     	//driver.manage().window().maximize();//Maximizar Ventana
     	
+    	  	
     	
     	//Obteniendo objetos / elementos de la pagina de login
     	
     	WebElement txtUserName = driver.findElement(By.id("txtUsername"));
     	WebElement txtpassword = driver.findElement(By.id("txtPassword"));
     	WebElement btnLogin = driver.findElement(By.id("btnLogin"));
+    	String forgotPwdMsj = driver.findElement(By.xpath("//*[@id='forgotPasswordLink']/a")).getText();
+    	System.out.println("El texto es : " +forgotPwdMsj);
     	
     	
     	//Haciendo login
@@ -56,6 +59,27 @@ public class App
 //    	Thread.sleep(3000);
 //    	driver.navigate().refresh();
 //    	Thread.sleep(3000);
+    	
+    	// Find Elements
+    	
+    	List <WebElement> firstLevelMenu = driver.findElements(By.xpath("//*[@class='firstLevelMenu']/b"));
+    	System.out.println("Numero de elementos: " + firstLevelMenu.size());
+    	String primerMenu = firstLevelMenu.get(0).getText();
+    	System.out.println(primerMenu);
+    	String segundoMenu = firstLevelMenu.get(1).getText();
+    	System.out.println(segundoMenu);
+    	
+    	
+    	for (int i = 0; i < firstLevelMenu.size();i++) {
+    		
+    		System.out.println("Los menus son: " + firstLevelMenu.get(i).getText() );
+    		
+    	}
+    			
+    			
+    	
+    	
+    	
     	
     	// Como imprimir el titulo de la pagina
     	
@@ -87,8 +111,37 @@ public class App
     	Thread.sleep(3000);
     	
     	
+    	// Ejercicio
 	
+    	WebElement btnDirectory = driver.findElement(By.id("menu_directory_viewDirectory"));
+    	btnDirectory.click();
+    	Thread.sleep(3000);
+    	    	
+    	WebElement txtName = driver.findElement(By.id("searchDirectory_emp_name_empName"));
+    	txtName.sendKeys("Robert");
+    	//txtName.sendKeys("Linda");
+    	Thread.sleep(3000);
     	
+    	Select lstJobTitle = new Select(driver.findElement(By.id("searchDirectory_job_title")));
+    	lstJobTitle.selectByValue("1");
+    	//lstJobTitle.selectByValue("3");
+    	Thread.sleep(3000);
+    	
+    	Select lstLocation = new Select(driver.findElement(By.id("searchDirectory_location")));
+    	
+    	lstLocation.selectByValue("3,1,2,-1");   
+    	//lstLocation.selectByValue("2");
+    	Thread.sleep(3000);
+    	
+    	WebElement btnSearch = driver.findElement(By.id("searchBtn"));
+    	btnSearch.click();
+    	Thread.sleep(3000);
+    	
+    	String lbName = driver.findElement(By.xpath("//*[@id='resultTable']/tbody/tr[2]/td[2]/ul/li[1]/b")).getText();
+    	System.out.println("El nombre del compa es: " + lbName);
+    	Thread.sleep(3000);
+    	   	
+    
     	
         // Cerrar Navegador Web
     	
