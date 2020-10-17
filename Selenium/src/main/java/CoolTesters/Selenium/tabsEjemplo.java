@@ -19,14 +19,14 @@ public class tabsEjemplo {
     	System.setProperty("webdriver.chrome.driver", exePath + "chromedriver.exe");// Establecer la propiedad del .exe
     	WebDriver driver = new ChromeDriver(); // Inicializando el driver
       	driver.get("http://demo.guru99.com/popup.php");
-      	driver.manage().window().maximize();// Maximizar Ventana
+//      driver.manage().window().maximize();// Maximizar Ventana
     	
 
 		
 		//Obtener e imprimir el ID de la venta / Tab Original
 		
-		String originalTab = driver.getWindowHandle();
-		System.out.println(originalTab);
+		String originalTab = driver.getWindowHandle(); // Obtiene el nombre de la ventana original
+		System.out.println(originalTab); // Imprime el nombre de la ventana original
 		Thread.sleep(5000);
 		
 		//Click en el link que abre otra ventana
@@ -39,7 +39,7 @@ public class tabsEjemplo {
 		System.out.println(ventanasAbiertas); 
 		
 		for (String tabNueva : driver.getWindowHandles()) {  //Estructura FOR simplificado
-			if (!originalTab.contentEquals(tabNueva)) { // el operador booleano "|" significa 
+			if (!originalTab.contentEquals(tabNueva)) { // el operador booleano "|" verifica que el contentEquals  
 				driver.switchTo().window(tabNueva);
 				break;
 			}

@@ -25,27 +25,27 @@ public class implicitWait {
     	System.setProperty("webdriver.chrome.driver", exePath + "chromedriver.exe");// Establecer la propiedad del .exe
     	WebDriver driver = new ChromeDriver(); // Inicializando el driver
     	driver.get("https://opensource-demo.orangehrmlive.com/");
-    	driver.manage().window().maximize(); //Maximizar Ventana
-    	//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    	//driver.manage().window().maximize(); //Maximizar Ventana
+    	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     	
     	
-		//Obteniendo objetos/elementos de la pagina del login
-//    	WebElement txtUserName = new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(By.id("txtUsername")));
-//    	txtUserName.sendKeys("test");
-//    	
+		// Obteniendo objetos/elementos de la pagina del login
+    	WebElement txtUserName = new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(By.id("txtUsername")));
+    	txtUserName.sendKeys("test");
+    	
 
     	//Esperar 20 segundos y que verifique cada 2 segundos
-    	Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-    			.withTimeout(Duration.ofSeconds(20))
-    			.pollingEvery(Duration.ofSeconds(2))
-    			.ignoring(NoSuchElementException.class);
-    	
-    	WebElement txtUserName = wait.until(new Function<WebDriver,WebElement>() {
-    		public WebElement apply(WebDriver driver) {
-    			driver.navigate().refresh();
-    			return driver.findElement(By.id("txtUserName"));
-    		}
-    	});
+//    	Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+//    			.withTimeout(Duration.ofSeconds(20))
+//    			.pollingEvery(Duration.ofSeconds(2))
+//    			.ignoring(NoSuchElementException.class);
+//    	
+//    	WebElement txtUserName = wait.until(new Function<WebDriver, WebElement>() {
+//    		public WebElement apply(WebDriver driver) {
+//    			driver.navigate().refresh();
+//    			return driver.findElement(By.id("txtUserName"));
+//    		}
+//    	});
     	
     	txtUserName.sendKeys("test");
     	

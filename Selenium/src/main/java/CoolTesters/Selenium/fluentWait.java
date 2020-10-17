@@ -3,9 +3,9 @@ package CoolTesters.Selenium;
 import java.io.File;
 import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -30,7 +30,7 @@ public class fluentWait {
        	Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
     			.withTimeout(Duration.ofSeconds(20))
     			.pollingEvery(Duration.ofSeconds(2))
-    			.ignoring(NoSuchElementException.class);
+    			.ignoring(NoSuchElementException.class); // Esto es lo que ignora nuestro WAIT durante 20 segundos
     	
     	WebElement txtUserName = wait.until(new Function<WebDriver,WebElement>() {
     		public WebElement apply(WebDriver driver) {
@@ -39,6 +39,7 @@ public class fluentWait {
     		}
     	});
     	
+    	txtUserName.click();
     
 
 	}
